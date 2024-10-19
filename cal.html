@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    body{
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .cal{
+       background-color: aquamarine;
+      
+        
+    }
+    .btn{
+        margin:-24vh 43vw;
+        display: flex;
+        flex-direction: row;
+        height: 0.1vh;
+        width: 3vw;
+       
+    }
+    .btn1 input[type=button]{
+        width: 3vw;
+        padding: 2.5vh;
+        background-color: aqua;
+
+    }
+    .btn2 input[type=button]{
+        width: 3vw;
+        padding: 2.5vh;
+        background-color: aqua;
+        
+    }
+    .btn3 input[type=button]{
+        width: 3vw;
+        padding: 2.5vh;
+        background-color: aqua;
+        
+    }
+    .btn4 input[type=button]{
+        width: 3vw;
+        padding: 2vh;
+        background-color: aqua;
+        
+    }
+    .spc input[type=button]{
+        background-color:aqua;
+        padding: 2.1vh;
+        justify-items: start;
+        justify-content: start;
+
+        
+    }
+    .scr input[type=text]{
+    
+      margin: 20vh 0 ;
+
+    }
+
+</style>
+    <body>
+        <div class="cal">
+            <div class="scr">
+                <input type="text" id="screen">
+            </div>
+
+            <div class="btn">
+                <div class="btn1">
+                    <input type="button" value="1" onclick="solve('1')">
+                    <input type="button" value="4" onclick="solve('4')">
+                    <input type="button" value="7" onclick="solve('7')">
+                    <input type="button" value="." onclick="solve('.')">
+                    <div class="spc">
+                        <input type="button" value="<" onclick="back()">
+
+                    </div>
+                </div>
+                <div class="btn2">
+                    <input type="button" value="2" onclick="solve('2')">
+                    <input type="button" value="5" onclick="solve('5')">
+                    <input type="button" value="8" onclick="solve('8')">
+                    <input type="button" value="0" onclick="solve('0')">
+                    <div class="spc">
+                        <input type="button" value="AC" onclick="clr()">
+
+                    </div>
+                </div>
+                <div class="btn3">
+                    <input type="button" value="3" onclick="solve('3')">
+                    <input type="button" value="6" onclick="solve('6')">
+                    <input type="button" value="9" onclick="solve('8')">
+                    <input type="button" value="=" onclick="calculate()">
+
+                </div>
+                <div class="btn4">
+                    <input type="button" value="+" onclick="solve('+')">
+                    <input type="button" value="-" onclick="solve('0')">
+                    <input type="button" value="*" onclick="solve('0')">
+                    <input type="button" value="/" onclick="solve('0')">
+
+                </div>
+                <div class="btn5">
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script>
+    function solve(value){
+        var inp=document.getElementById('screen').value+=value;
+    }
+
+    function clr(){
+        var num=document.getElementById('screen').value=""
+    }
+    
+    function calculate(){
+        var num=document.getElementById('screen').value
+        var num1=eval(num)
+        document.getElementById('screen').value=num1
+    }
+    function back() {
+        var screen = document.getElementById('screen');
+        if (screen) {
+            screen.value = screen.value.slice(0, -1); // Remove the last character
+        }
+    }
+    
+    
+</script>
+</html>

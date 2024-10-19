@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Purchase Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;  /* Dark background */
+            color: #f0f0f0;             /* Light text color for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;           /* Prevent scrolling */
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(270deg, #000000, #635656, rgb(0, 0, 0)); /* Gradient background */
+            animation: gradient 5s ease infinite;  /* Animation */
+            z-index: -1;  /* Behind the card */
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(30, 30, 30, 0.9);  /* Slightly transparent dark background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);  /* Darker shadow */
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.05);  /* Slight zoom on hover */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #e63946;  /* Bold red for contrast */
+            color: #ffffff;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d62839;  /* Darker red on hover */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #confirmation-message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        #confirmation-message.visible {
+            opacity: 1;  /* Fade in effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div> <!-- Animated background -->
+    <div class="container">
+        <h1>Thank You for Your Purchase!</h1>
+        <p>Your order has been confirmed.</p>
+        <p>Order Number: <span id="order-number">123456</span></p>
+        
+        <button id="confirm-button">Confirm</button>
+
+        <div id="confirmation-message" class="hidden">
+            <p>Your order will be processed shortly.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('confirm-button').addEventListener('click', function() {
+            const confirmationMessage = document.getElementById('confirmation-message');
+            confirmationMessage.classList.remove('hidden');
+            confirmationMessage.classList.add('visible');  // Fade in effect
+        });
+    </script>
+</body>
+</html>

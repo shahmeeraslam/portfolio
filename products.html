@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SHAH.</title>
+        <link rel="icon"
+            href="./pictures/Purple and Blue Grdient Simple Minimalist Elegant Website Logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif, monospace;
+            box-sizing: border-box;
+        }
+        
+        .nav {
+            font-size: 2vh;
+        }
+
+        nav {
+            background-color: aquamarine;
+            display: flex;
+            gap: 60vw;
+            padding: 4vh;
+            font-size: 2vh;
+        }
+
+        a {
+            padding: 2vh;
+            text-decoration: none;
+            color: black;
+            border: 1vh;
+            border-radius: 6vh;
+        }
+
+        a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #intro {
+            height: 25vh;
+            width: 26vw;
+            text-align: center;
+            margin: 9vh 4vh;
+            font-size: 3vh;
+        }
+
+        span {
+            color: blue;
+            font-size: 3.5vh;
+        }
+
+        h1 {
+            color: blue;
+            font-size: 2.5vh;
+        }
+
+        #h1 {
+            font-size: 5vh;
+            text-align: center;
+        }
+
+        marquee {
+            background-color: rgb(72, 92, 182);
+            color: azure;
+            padding: 2vh;
+            font-size: 2vh;
+            letter-spacing: 10px;
+            font-size: 19px;
+            font-weight: 600;
+
+        }
+
+        .pic1 {
+            display: flex;
+            gap: 40vw;
+            font-size: 3.1vh;
+        }
+
+        .pic img {
+            width: 20vw;
+            margin: 2px 2vw;
+        }
+        .pic1 button {
+            background-color: white;
+        }
+
+        #main {
+            background-color: rgb(220, 228, 228);
+            height: auto; /* Allow content to dictate height */
+            opacity: 100v;
+            font-size: 3.1vh;
+            padding-bottom: 100px; /* Ensure space for footer */
+        }
+
+        h1 span {
+            font-size: 3.1vh;
+        }
+
+        .box1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2vh;
+            font-size: 3.1vh;
+        }
+
+        button {
+            font-size: 1.8vh;
+            padding: 1.5vh;
+            border: none;
+            margin: 2vh;
+            background-color:  rgb(220, 228, 228);
+        }
+
+        button a {
+            border: 0.2vh solid black;
+        }
+
+        button a:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+
+        .detail {
+            border: 0.2vh solid black;
+            padding: 2.1vh;
+            margin: 2vh 50vh;
+            width: 50vw;
+            text-decoration: dotted;
+            color: rgb(48, 40, 40);
+            text-align: center;
+            background-color: aquamarine;
+            font-size: 2.2vh;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            
+        }
+
+        .box2 {
+            border: 0.1vh solid black;
+            width: 27vw;
+            margin: 5vh;
+            padding: 0.5vh;
+            text-align: center;
+            box-shadow: 0.2vh 0.2vh 1.09vh rgba(0, 0, 0, 0.5);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 100;
+    ;
+        }
+
+        .box2 img {
+            font-size: 2.1vh;
+            width: 15vw ;
+        }
+
+        .box2 p {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: oblique;
+        }
+
+        .box2:hover {
+            transform: scale(1.2);
+        }
+
+        .box2 h1 {
+            color: black;
+            text-transform: capitalize;
+            font-family: bold;
+            font-size: 4vh;
+        }
+
+        
+       
+        .footer {
+            background-color: aquamarine;
+            padding: 5vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 2.1vh;
+            }
+        
+        .footer-section {
+            margin-bottom: 3vh;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 2vh;
+        }
+        
+        .footer-section ul {
+            list-style-type: none;
+            margin: 2vh;
+            padding: 1vh;
+        }
+        
+        .footer-section  a {
+            text-decoration: none;
+            color: #333;
+    
+        }
+        .footer ul li a:hover{
+            background-color: #000000;
+            color: antiquewhite;
+        }
+        .footer-section input[type="email"] {
+            padding: 2vh;
+            width: 40vw;
+            border: 1px solid #ccc;
+            font-size: 2.1vh;
+            
+        }
+        
+        .footer-section button {
+            padding: 2vh;
+            background-color: #333;
+            color: white;
+            border: none;
+        }
+        
+        .footer-bottom {
+            margin-top: 3vh;
+        }
+        
+        .footer-bottom a {
+            text-decoration: none;
+            color: #000000;
+            padding: 0.1vh;
+        }
+        .footer-bottom  :hover{
+            background-color: #272424;
+            color: #ccc;
+        }
+       .footer ul li a{
+        
+     padding: 0.1vh;
+     margin: 2vh;
+       }
+    
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <section class="nav">
+                <nav>
+                    <div class="a1">
+                        <h1>SHAH.</h1>
+                    </div>
+                    <div>
+                        <a href="#">Home</a>
+                        <a href="#main">Product</a>
+                        <a href="#Contact">Contact</a>
+                        <a href="./index (1).html">More</a>
+                    </div>
+                </nav>
+                <marquee behavior="infinite" direction="left">Shop the latest
+                    trends at unbeatable prices—don't miss out!</marquee>
+                <div class="pic1">
+                    <section id="intro">
+                        <h2>
+                            Welcome to <span>SHAH.</span> <br>
+                            Order the quality products
+                        </h2>
+                        <p>Discover unbeatable deals and endless selections at
+                            our E-Commerce store, where quality meets
+                            convenience!</p>
+                        <button><a href="#main">Products</a></button>
+                    </section>
+                    <div class="pic">
+                        <img
+                            src="./pictures/web-devices-together-concept-illustration.png"
+                            alt="pic">
+                    </div>
+                </div>
+            </section>
+
+            <div class="detail">
+                <p>Welcome to SHAH, your ultimate destination for stylish and
+                    unique apparel for everyone! Our e-commerce site offers a
+                    comprehensive collection of high-quality clothing for both
+                    men and women, designed to express individuality and elevate
+                    your wardrobe. At SHAH, we believe that fashion should be
+                    accessible, versatile, and reflective of your personal
+                    style.</p>
+                <p>Explore our diverse range of trendy designs, from bold
+                    graphics to timeless classics, crafted with meticulous
+                    attention to detail and made from premium materials for
+                    comfort and durability. Whether you’re dressing up for a
+                    night out, lounging at home, or searching for the perfect
+                    gift, we have something for every taste and occasion.</p>
+                <p>In addition to our extensive clothing line, we are excited to
+                    announce that we will soon be launching a range of stylish
+                    shoes, as well as cutting-edge computers and mobile devices.
+                    Our commitment to quality extends beyond just apparel; we
+                    aim to provide an exceptional shopping experience with
+                    user-friendly navigation, secure payment options, and fast,
+                    reliable shipping. Plus, our dedicated customer service team
+                    is always here to assist you.</p>
+                <p>Join the SHAH community today and redefine your fashion
+                    statement! With every purchase, you’re not just adding to
+                    your wardrobe; you’re embracing a lifestyle that celebrates
+                    creativity and self-expression. Experience the difference
+                    with SHAH—where style meets individuality and quality meets
+                    innovation!</p>
+            </div>
+            <h1 id="h1">Let's Shop <br><span style='font-size:10vh;'>&#8595;</span></h1>
+        </header>
+        <main id="main">
+            <div class="products">
+                <div class="box2">
+                    <img
+                        src="./pictures/png-clipart-t-shirt-polo-shirt-clothing-sleeve-black-t-shirt-black-crew-neck-t-shirt-tshirt-fashion-thumbnail-removebg-preview.png"
+                        alt="shirt">
+                    <div class="content">
+                        <h1>T-Shirt</h1>
+                        <p>Discover SHAH T-Shirts! Stylish, comfortable, and
+                            unique designs to express your personality. Shop now
+                            and find your perfect tee!</p>
+                        <button><a href="./buy/pur1.html">ORDER NOW</a></button>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img
+                        src="./pictures/png-transparent-tracksuit-nike-clothing-jacket-sportswear-nike-zipper-sport-sporting-goods-thumbnail-removebg-preview.png"
+                        alt="shirt">
+                    <div class="content">
+                        <h1>TRACK SUIT</h1>
+                        <p>Experience comfort and style with Shah's premium
+                            track suits, designed for performance and casual
+                            wear. Perfect for any activity!</p>
+                        <button><a href="./buy/pur2.html">ORDER NOW</a></button>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img
+                        src="./pictures/png-transparent-columbia-sportswear-down-feather-jacket-columbia-kids-boy-jacket-blue-boy-hoodie-thumbnail-removebg-preview.png"
+                        alt="shirt">
+                    <div class="content">
+                        <h1>JACKIT</h1>
+                        <p>Stay stylish and comfortable with Shah's jackets,
+                            crafted for versatility and designed to elevate any
+                            outfit. Perfect for all seasons!</p>
+                        <button><a href="./buy/pur3.html">ORDER NOW</a></button>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img
+                        src="./pictures/png-transparent-swim-tshirt-hoodie-adidas-shorts-clothing-nike-calzado-deportivo-sportswear-pants-thumbnail-removebg-preview.png"
+                        alt="shirt">
+                    <div class="content">
+                        <h1>SHORTS</h1>
+                        <p>Discover comfort and style with Shah's shorts,
+                            perfect for workouts or casual outings. Designed for
+                            freedom of movement and everyday wear!</p>
+                        <button><a href="./buy/pur4.html">ORDER NOW</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="box2">
+                    <img
+                        src="pictures/png-transparent-hoodie-jacket-clothing-nike-sportswear-jacket-zipper-hoodie-black-thumbnail-removebg-preview.png"
+                        alt="shirt">
+                    <div class="content">
+                        <h1>IMPORTED JACKIT</h1>
+                        <p>Upgrade your wardrobe with Shah's imported jackets,
+                            featuring superior quality and trendy designs.
+                            Perfect for any occasion!</p>
+                        <button><a href="./buy/pur5.html">ORDER NOW</a></button>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img
+                        src="pictures/png-transparent-ski-suit-skiing-jacket-clothing-material-taobao-winter-sport-jersey-thumbnail-removebg-preview.png"
+                        alt="shirt">
+                    <div class="content">
+                        <h1>SKI SUIT</h1>
+                        <p>Conquer the slopes in style with Shah's ski suits,
+                            designed for warmth and flexibility. Perfect for
+                            both performance and comfort on the mountain!</p>
+                        <button><a href="./buy/pur6.html">ORDER NOW</a></button>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img
+                        src="pictures/png-transparent-black-pullover-hoodie-hoodie-t-shirt-tracksuit-bluza-jacket-hoodie-sneakers-black-polar-fleece-thumbnail-removebg-preview.png"
+                        alt="shirt">
+                    <div class="content">
+                        <h1>HOODIE</h1>
+                        <p>Stay cozy and stylish with Shah's hoodies, designed
+                            for comfort and versatility. Perfect for layering or
+                            casual outings!</p>
+                        <button><a href="./buy/pur7.html">ORDER NOW</a></button>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img
+                        src="./pictures/png-transparent-unpaired-black-running-shoe-sneakers-skate-shoe-nike-adidas-a-sports-shoes-white-sport-fashion-thumbnail-removebg-preview.png"
+                        alt="shirt">
+                    <div class="content">
+                        <h1>ORIGINAL SNEAKERS</h1>
+                        <p>Stay cozy and stylish with Shah's sneakers, designed
+                            for comfort and versatility. Perfect for everyday
+                            wear!</p>
+                        <button><a href="./buy/pur8.html">ORDER NOW</a></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer id="Contact">
+            <div class="footer">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Learn more about Shah, our mission, and our commitment to
+                        quality.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#shipping">Shipping & Returns</a></li>
+                        <li><a href="#size-guide">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2024 Shah. All rights reserved.</p>
+                    <a href="#privacy">Privacy Policy</a> |
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+    <script>
+
+</script>
+
+</html>
